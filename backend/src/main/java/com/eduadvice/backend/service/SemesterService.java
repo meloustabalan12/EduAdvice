@@ -61,12 +61,6 @@ public class SemesterService {
         return toDTO(semester.get());
     }
 
-    // If this method is used to get the Semesters form a parcours
-    // I think this method should be in the ParcoursService class
-    public List<Semester> getSemestersByParcours(Long parcoursId) {
-        return semesterRepository.findByParcoursId(parcoursId);
-    }
-
     public ParcoursDTO getParcours(Long semesterId){
         Semester semester = semesterRepository.findById(semesterId)
                 .orElseThrow(() -> new RessourceNotFoundException(

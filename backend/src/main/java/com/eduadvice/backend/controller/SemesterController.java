@@ -3,7 +3,6 @@ package com.eduadvice.backend.controller;
 import com.eduadvice.backend.dto.SemesterDTO;
 import com.eduadvice.backend.dto.ParcoursDTO;
 import com.eduadvice.backend.dto.TeachingUnitResponseDTO;
-import com.eduadvice.backend.entity.Semester;
 import com.eduadvice.backend.service.SemesterService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -33,12 +32,6 @@ public class SemesterController {
     @GetMapping({"/{id}/parcours", "/{id}/parcours/"})
     public ResponseEntity<ParcoursDTO> getParcours(@PathVariable Long id){
         return ResponseEntity.ok(semesterService.getParcours(id));
-    }
-
-    // this route doesn't work because of lazy intialization
-    @GetMapping("/parcours/{parcoursId}")
-    public List<Semester> getSemestersByParcours(@PathVariable Long parcoursId) {
-        return semesterService.getSemestersByParcours(parcoursId);
     }
 
     @GetMapping({"/{id}/teaching-units","/{id}/teaching-units/"})

@@ -44,10 +44,6 @@ public class Semester {
         return parcours;
     }
 
-    public void setNumber(Integer number) {
-        this.number = number;
-    }
-
     public void setParcours(Parcours parcours) {
         this.parcours = parcours;
     }

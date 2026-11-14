@@ -7,5 +7,4 @@ import java.util.List;
 
 public interface SemesterRepository extends JpaRepository<Semester, Long> {
 
-    List<Semester> findByParcoursId(Long parcoursId);
 }
