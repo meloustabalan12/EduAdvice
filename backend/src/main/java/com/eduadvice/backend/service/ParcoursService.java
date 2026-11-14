@@ -42,7 +42,6 @@ public class ParcoursService {
     }
 
     public ParcoursDTO getParcoursById(Long id){
-
         Optional<Parcours> parcours = parcoursRepository.findById(id);
 
         if(parcours.isEmpty()) {

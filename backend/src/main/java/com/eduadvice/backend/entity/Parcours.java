@@ -67,22 +67,6 @@ public class Parcours {
         opportunity.getParcours().add(this);
     }
 
-    public void removeCareerOpportunity(CareerOpportunity opportunity){
-        careerOpportunities.remove(opportunity);
-        opportunity.getParcours().remove(this);
-    }
-
-    //helper for Semester
-    public void addSemester(Semester semester){
-        semesters.add(semester);
-        semester.setParcours(this);
-    }
-
-    public void removeSemester(Semester semester){
-        semesters.remove(semester);
-        semester.setParcours(null);
-    }
-
     public Long getId() {
         return id;
     }
