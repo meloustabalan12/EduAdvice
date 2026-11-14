@@ -38,15 +38,6 @@ public class SubjectService {
         return convertToDTO(subject);
     }
 
-    public List<SubjectResponseDTO> getSubjectsByTeachingUnit(
-            Long teachingUnitId
-    ) {
-        return subjectRepository.findByTeachingUnitId(teachingUnitId)
-                .stream()
-                .map(this::convertToDTO)
-                .toList();
-    }
-
     public TeachingUnitResponseDTO getTeachingUnit(Long subjectId){
         Subject subject = subjectRepository.findById(subjectId)
                 .orElseThrow(() -> new RessourceNotFoundException(

@@ -83,16 +83,4 @@ public class Subject {
     public void setName(String name) {
         this.name = name;
     }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public void setEcts(BigDecimal ects) {
-        this.ects = ects;
-    }
 }
