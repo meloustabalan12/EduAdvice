@@ -42,15 +42,6 @@ public class TeachingUnitService {
         return convertToDTO(teachingUnit);
     }
 
-    public List<TeachingUnitResponseDTO> getTeachingUnitsBySemester(
-            Long semesterId
-    ) {
-        return teachingUnitRepository.findBySemesterId(semesterId)
-                .stream()
-                .map(this::convertToDTO)
-                .toList();
-    }
-
     public SemesterDTO getSemester(Long teachingUnitId){
         TeachingUnit teachingUnit = teachingUnitRepository.findById(teachingUnitId)
                 .orElseThrow(() -> new RessourceNotFoundException(

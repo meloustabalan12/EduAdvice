@@ -74,14 +74,6 @@ public class TeachingUnit {
         this.name = name;
     }
 
-    public void setCategory(TeachingUnitCategory category) {
-        this.category = category;
-    }
-
-    public void setEcts(BigDecimal ects) {
-        this.ects = ects;
-    }
-
     public List<Subject> getSubjects() {
         return subjects;
     }

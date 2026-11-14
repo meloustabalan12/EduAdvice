@@ -26,20 +26,13 @@ public class TeachingUnitController {
     }
 
     @GetMapping({"/{id}","/{id}/"})
-    public TeachingUnitResponseDTO getTeachingUnitById(
-            @PathVariable Long id) {
+    public TeachingUnitResponseDTO getTeachingUnitById(@PathVariable Long id) {
         return teachingUnitService.getTeachingUnitById(id);
     }
 
     @GetMapping({"/{id}/semester","/{id}/semester/"})
     public ResponseEntity<SemesterDTO> getSemester(@PathVariable Long id){
         return ResponseEntity.ok(teachingUnitService.getSemester(id));
-    }
-    
-    @GetMapping("/semester/{semesterId}")
-    public List<TeachingUnitResponseDTO> getTeachingUnitsBySemester(
-            @PathVariable Long semesterId) {
-        return teachingUnitService.getTeachingUnitsBySemester(semesterId);
     }
 
     @GetMapping({"/{id}/subjects","/{id}/subjects/"})
